@@ -7,7 +7,12 @@
 </head>
 <body class="test-background">
 <h1 class="test">欢迎！</h1>
-<img src="static/img/logo.png">
-<a href="/view/login.233">进入登录页面</a>
+<form action="/login/loginCheck.do" method="post">
+  用户名：<input type="text" name="username">
+  <br>
+  密码：<input type="password" name="password">
+  <br>
+  <input type="submit" value="登陆">
+</form>
 </body>
 </html>
