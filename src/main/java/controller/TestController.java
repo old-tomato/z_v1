@@ -23,7 +23,7 @@ public class TestController {
     }
 
     @RequestMapping(value = "/loginCheck" , method = RequestMethod.POST)
-    public ModelAndView loginCheck(HttpServletRequest request, LoginCommand loginCommand) {
+    public ModelAndView loginCheck(LoginCommand loginCommand) {
         String password = loginCommand.getPassword();
         System.out.printf("password ==> " + password);
         return new ModelAndView("main");

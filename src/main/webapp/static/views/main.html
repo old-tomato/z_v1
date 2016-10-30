@@ -3,10 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="/static/lib/angular.min.js"></script>
-    <script src="/static/lib/require.js" data-main="/static/js/main"></script>
 </head>
-<body>
-
+<body  ng-cloak >
+    <a href="#/ff14">测试跳转到页面</a>
+    <div>
+        <div ng-controller="testController">
+            <div ng-click="controller.alert()">6666</div>
+        </div>
+    </div>
+    <div>
+        <!--<div ui-view="content_operate"></div>-->
+        <!--这个标签表示当前通过AngularJS跳转的界面在这个标签下面渲染-->
+        <div ng-view ngCloak></div>
+    </div>
+    <!-- 导入Jquery 同时导入Angular的相关的模块-->
+    <script src="/static/js/lib/jquery.min.js"></script>
+    <script src="/static/js/lib/angular.min.js"></script>
+    <script src="/static/js/lib/angular-animate.min.js"></script>
+    <script src="/static/js/lib/angular-route.min.js"></script>
+    <!-- 导入require内容，通过main.js进行所有JS文件的初始化操作 -->
+    <script src="/static/js/lib/require.js" data-main="/static/js/main"></script>
 </body>
 </html>
